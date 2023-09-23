@@ -13,12 +13,13 @@ const port=8000;
     // console.log(2,res.locals.validated);
 // 
 // });
-app.get("/",(req,res,next)=>{
-    res.redirect("/users");
-});
-app.get("/users",(req,res,next)=>{
-    res.json({name:"John",age:30});
-});
-
+// app.get("/",(req,res,next)=>{
+// res.redirect("/users");
+// });
+// app.get("/users",(req,res,next)=>{
+// res.json({name:"John",age:30});
+// });
+const router=require("./router");
+app.use("/",router);
 
 app.listen(8000, () => console.log(`Server started on ${port}`));
