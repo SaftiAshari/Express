@@ -20,6 +20,8 @@ const port=8000;
 // res.json({name:"John",age:30});
 // });
 const router=require("./router");
+const productrouter=require("./productrouter");
 app.use("/",router);
+app.use("/products",productrouter);
 
 app.listen(8000, () => console.log(`Server started on ${port}`));

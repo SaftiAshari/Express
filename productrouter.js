@@ -6,3 +6,4 @@ router.get("/",(req,res,next)=>{
 router.get("/users",(req,res,next)=>{
     res.json({"message":"Products user Page"});
 });
+module.exports=router;
